@@ -9,11 +9,10 @@ describe('theBeatlesPlay', () => {
   jsdom({
     src: fs.readFileSync(path.resolve(__dirname, '..', 'beatles.js'), 'utf-8')
   })
-
+  
   it("returns an array of strings containing what instruments each instrument plays", () => {
     const musicians = ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"];
     const instruments = ["Guitar", "Bass Guitar", "Lead Guitar", "Drums"];
-
     expect(theBeatlesPlay(musicians, instruments)).to.eql(["John Lennon plays Guitar", "Paul McCartney plays Bass Guitar", "George Harrison plays Lead Guitar", "Ringo Starr plays Drums"]);
   });
 
